@@ -34,26 +34,37 @@
           ></textarea>
         </div>
 
-        <div class="row d-flex justify-content-left check-boxes">
-          <div class="col-6">
+        <!-- container with checkboxes -->
+        <div class="row d-flex justify-content-sm-center check-boxes">
+        
+          <!-- row 1: lower case, upper case checkboxes -->
+          <div class="col-sm-2"></div>
+          <div class="col-sm-4 d-flex justify-content-left align-items-baseline">
             <input type="checkbox" id="lowerCase" /><label for="lowerCase"
             >lower case</label>
           </div>
-         <div class="col-6">
+         <div class="col-sm-4 d-flex justify-content-left align-items-baseline">
           <input type="checkbox" id="upperCase" /><label for="upperCase"
           >upper case</label>
          </div>
-          <div class="col-6">
+         <div class="col-sm-2"></div>
+
+         <!-- row 2: numbers, special character checkboxes -->
+         <div class="col-sm-2"></div>
+          <div class="col-sm-4 d-flex justify-content-left align-items-baseline">
             <input type="checkbox" id="numbers" /><label for="numbers"
             >numbers</label>
           </div>
-          <div class="col-6">
+          <div class="col-sm-4 d-flex justify-content-left align-items-baseline">
             <input type="checkbox" id="special" /><label for="special"
             >special characters</label>
           </div> 
+          <div class="col-sm-2"></div>
+
+        <!-- the tag below closes .check-boxes container -->
         </div>
 
-
+        <!-- slider row -->
         <div class="slide-container">
           <label for="slider">Password Length: </label>
             <input type="range" min="8" max="128" value="60" id="slider" /> <span id="sliderOutput"></span>
@@ -61,11 +72,14 @@
           <p id="alert"></p>
         </div>
 
+        <!-- button row -->
         <div class="card-button">
           <button id="copy" class="btn">Copy Password</button>
           <button id="clearMe" class="btn">Clear</button>
         </div>
+      <!-- the tag below closes the .card div -->
       </div>
+    <!-- the tag below closes the .wrapper div -->
     </div>
     <script src="script.js"></script>
   </body>

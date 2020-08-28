@@ -75,6 +75,10 @@ passwordHere.textContent = thePassword.join("");
 $copy.addEventListener("click", function(){
   passwordHere.select();
   document.execCommand('copy');
+  if (!passwordHere.value) {
+    $alert.textContent = "Nothing to copy. Please generate a password.";
+    return;
+  }
 });
 // clear button function
 $clearPassword.addEventListener("click", function () {
@@ -89,6 +93,7 @@ $clearPassword.addEventListener("click", function () {
   // clear slider values
   $slider.value = 60;
   $sliderOutput.innerHTML = "";
+  $alert.textContent = "";
 });
 
 
