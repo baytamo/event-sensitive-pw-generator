@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Orbitron&family=Sora:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Secure Password Generator</h1>
+      </header>
+      <div class="card">
+        <div class="card-greeting">
+          <h2>
+            Good luck and may all your wildest strong password dreams come true.
+          </h2>
+        </div>
+        <div class="card-body">
+          <textarea
+            readonly
+            id="password"
+            placeholder="your password here"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+
+        <div class="row d-flex justify-content-left check-boxes">
+          <div class="col-6">
+            <input type="checkbox" id="lowerCase" /><label for="lowerCase"
+            >lower case</label>
+          </div>
+         <div class="col-6">
+          <input type="checkbox" id="upperCase" /><label for="upperCase"
+          >upper case</label>
+         </div>
+          <div class="col-6">
+            <input type="checkbox" id="numbers" /><label for="numbers"
+            >numbers</label>
+          </div>
+          <div class="col-6">
+            <input type="checkbox" id="special" /><label for="special"
+            >special characters</label>
+          </div> 
+        </div>
+
+
+        <div class="slide-container">
+          <label for="slider">Password Length: </label>
+            <input type="range" min="8" max="128" value="60" id="slider" /> <span id="sliderOutput"></span>
+          </p>
+          <p id="alert"></p>
+        </div>
+
+        <div class="card-button">
+          <button id="copy" class="btn">Copy Password</button>
+          <button id="clearMe" class="btn">Clear</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
