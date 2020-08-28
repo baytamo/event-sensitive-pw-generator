@@ -70,16 +70,23 @@ passwordHere.textContent = thePassword.join("");
 
 });
 
+
+// copy pw to clipboard
+$copy.addEventListener("click", function(){
+  passwordHere.select();
+  document.execCommand('copy');
+});
 // clear button function
-
-
 $clearPassword.addEventListener("click", function () {
   passwordHere.textContent = "";
 
+  // clear checkboxes
   $lowerCase.checked = false;
   $upperCase.checked = false;
   $numbers.checked = false;
   $special.checked = false;
+
+  // clear slider values
   $slider.value = 60;
   $sliderOutput.innerHTML = "";
 });
