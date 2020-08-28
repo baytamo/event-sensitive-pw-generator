@@ -28,13 +28,40 @@ $slider.addEventListener('input', function (event){
   characterNums();
 });
 
-// event listener once user choose number of characters
-$slider.addEventListener('mouseup', function() {
+function clearTextArea(){
   userArray = [];
   thePassword = [];
   $alert.textContent = "";
   passwordHere.textContent = "";
+}
 
+// event listener on mouse up for slider
+$slider.addEventListener('mouseup', function() {
+  clearTextArea();
+  generatePassword();
+});
+// modifies password depending on whether checkboxes are checked or not
+$lowerCase.addEventListener("click", function (){
+  clearTextArea();
+  generatePassword();
+});
+
+$upperCase.addEventListener("click", function (){
+  clearTextArea();
+  generatePassword();
+});
+
+$numbers.addEventListener("click", function (){
+  clearTextArea();
+  generatePassword();
+});
+
+$special.addEventListener("click", function (){
+  clearTextArea();
+  generatePassword();
+});
+
+function generatePassword() {
   if (!$lowerCase.checked && !$upperCase.checked && !$numbers.checked && !$special.checked) {
     $alert.textContent = "Please choose password characters."
   }
@@ -67,10 +94,7 @@ for (let i = 0; i < $slider.value; i++) {
   thePassword.push(passwordString);
 }
 passwordHere.textContent = thePassword.join("");
-
-});
-
-
+}
 // copy pw to clipboard
 $copy.addEventListener("click", function(){
   passwordHere.select();
