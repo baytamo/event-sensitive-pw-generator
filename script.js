@@ -20,6 +20,7 @@ let thePassword = [];
 let passwordHere = document.getElementById("password");
 
 // buttons
+let $generate = document.getElementById("generate");
 let $copy = document.getElementById("copy");
 let $clearPassword = document.getElementById("clearMe");
 
@@ -40,6 +41,13 @@ $slider.addEventListener('mouseup', function() {
   clearTextArea();
   generatePassword();
 });
+
+// event listener for generate button
+$generate.addEventListener("click", function(){
+  clearTextArea();
+  generatePassword();
+});
+
 // modifies password depending on whether checkboxes are checked or not
 $lowerCase.addEventListener("click", function (){
   clearTextArea();
