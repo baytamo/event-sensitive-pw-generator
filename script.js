@@ -24,6 +24,9 @@ let $generate = document.getElementById("generate");
 let $copy = document.getElementById("copy");
 let $clearPassword = document.getElementById("clearMe");
 
+// show initial value of slider
+characterNums();
+
 // event listener to display slider value after mouse up
 $slider.addEventListener('input', function (event){
   characterNums();
@@ -123,8 +126,8 @@ $clearPassword.addEventListener("click", function () {
   $special.checked = false;
 
   // clear slider values
-  $slider.value = 60;
-  $sliderOutput.innerHTML = "";
+  $slider.value = 12;
+  $sliderOutput.innerHTML = $slider.value;
   $alert.textContent = "";
 });
 

@@ -60,6 +60,10 @@ header {
   min-height: 100px;
 }
 
+#lowerCase, #upperCase, #numbers, #special, #slider {
+  cursor: pointer;
+}
+
 .card-button {
   text-align: center;
 }
